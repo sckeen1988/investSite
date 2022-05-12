@@ -21,7 +21,7 @@ Python 3 is required to run.
 
 After navigating to Kis_site folder, all other dependencies can be installed via:
 ```
-  $ python3 -m pip install -r requirements.txt
+  pip install -r requirements.txt
 ```
 
 
