@@ -19,7 +19,7 @@ Each remaining template is the html base code for each page of the site.
 
 Python 3 is required to run. 
 
-After navigating to Kis_site folder, all other dependencies can be installed via:
+All other dependencies can be installed via:
 ```
   pip install -r requirements.txt
 ```
