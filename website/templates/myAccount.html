@@ -6,5 +6,16 @@ Invest Smarter today
 
 {% block content %}
 Good morning {{ current_user.first_name }}
-<p>You currently have {{account}} </p>
+<p>You currently have {{account}} shares</p>
+<form method="POST">
+    <label for="deposit">Deposit Amount:</label>
+    <input type="text" id="deposit" name="deposit" placeholder="Enter only positive integers">
+    <br><br>
+
+    <label for="withdraw">Withdrawal Request: </label>
+    <input type="text" id="withdraw" name="withdraw" placeholder="Enter only positive integers"><br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
 {% endblock %}
