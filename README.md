@@ -42,15 +42,18 @@ http://127.0.0.1:5000/
 
 ## Future goals
 
-1) Allow users to 'buy' shares of the company
-2) Migrate the sqlite database to postgres
-3) Create a connection to TDAmeritrade's api and retrieve prices for SPY, display this value on the myAccount page.
+1) Allow users to 'sell' shares of the company
+2) Do not require users to enter an interger into each submit form on myAccounts page
+3) Migrate the sqlite database to postgres
+4) Create a connection to TDAmeritrade's api and retrieve prices for SPY, display this value on the myAccount page.
 
 
 ## Version History
 
 * 0.1
     * Initial Release
+* 0.2
+    * Added functionality to update database
 
 
 ## Acknowledgments
