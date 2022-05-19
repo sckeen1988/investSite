@@ -42,13 +42,23 @@ def myAccount():
         sell = int(request.form.get('withdraw'))
         buy = int(request.form.get('deposit'))
         if userShares == None:
+            if sell > 0:
+                flash("You cannot sell more shares than you own", category="error")
             newOwner = Shares(id = current_user.id, user_id = current_user.id, new_shares=buy, total_shares=buy)
             db.session.add(newOwner)
             db.session.commit()
         else:
-            userShares.total_shares += buy
-            userShares.new_shares = buy
-            db.session.commit()
+            if buy > 0:
+                userShares.total_shares += buy
+                userShares.new_shares = buy
+                db.session.commit()
+            if sell > 0 and userShares.total_shares >= sell:
+                userShares.total_shares -= sell
+                userShares.new_shares = sell*-1
+                db.session.commit()
+            elif sell > 0 and userShares.total_shares < sell:
+                flash("You cannot sell more shares than you own", category="error")
+
         return redirect(url_for('auth.myAccount'))
     if userShares:
         accountValue = userShares.total_shares
