@@ -49,7 +49,7 @@ def myAccount():
             userShares.total_shares += buy
             userShares.new_shares = buy
             db.session.commit()
-        
+        return redirect(url_for('auth.myAccount'))
     if userShares:
         accountValue = userShares.total_shares
     else:
