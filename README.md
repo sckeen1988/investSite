@@ -42,11 +42,10 @@ http://127.0.0.1:5000/
 
 ## Future goals
 
-1) Allow users to 'sell' shares of the company
-2) Do not require users to enter an interger into each submit form on myAccounts page
-3) Add Admin page in order to see all users and delete users as needed
-4) Migrate the sqlite database to postgres
-5) Create a connection to TDAmeritrade's api and retrieve prices for SPY, display this value on the myAccount page.
+1) Do not require users to enter an integer into each submit form on myAccounts page
+2) Add Admin page in order to see all users and delete users as needed
+3) Migrate the sqlite database to postgres
+4) Create a connection to TDAmeritrade's api and retrieve prices for SPY, display this value on the myAccount page.
 
 
 ## Version History
